@@ -1,25 +1,5 @@
 {
-  "name": "medusa-2.0-boilerplate-backend",
-  "version": "0.0.1",
-  "description": "A Prebaked Medusa 2.0 backend",
   "author": "Rasmus Puls",
-  "type:": "module",
-  "license": "MIT",
-  "keywords": [
-    "sqlite",
-    "postgres",
-    "typescript",
-    "ecommerce",
-    "headless",
-    "medusa"
-  ],
-  "scripts": {
-    "build": "medusa build",
-    "seed": "medusa exec ./src/scripts/seed.ts",
-    "seed:once": "node script/seedOnce.js",
-    "start": "medusa start",
-    "dev": "medusa develop"
-  },
   "dependencies": {
     "@medusajs/api-key": "preview",
     "@medusajs/auth": "preview",
@@ -29,6 +9,7 @@
     "@medusajs/currency": "preview",
     "@medusajs/customer": "preview",
     "@medusajs/event-bus-local": "preview",
+    "@medusajs/event-bus-redis": "preview",
     "@medusajs/file": "preview",
     "@medusajs/file-local-next": "preview",
     "@medusajs/fulfillment": "preview",
@@ -37,7 +18,6 @@
     "@medusajs/medusa": "preview",
     "@medusajs/notification": "preview",
     "@medusajs/notification-local": "preview",
-    "@medusajs/event-bus-redis": "preview",
     "@medusajs/notification-sendgrid": "preview",
     "@medusajs/order": "preview",
     "@medusajs/payment": "preview",
@@ -54,6 +34,7 @@
     "@medusajs/workflow-engine-inmemory": "preview",
     "express": "^4.17.2"
   },
+  "description": "A Prebaked Medusa 2.0 backend",
   "devDependencies": {
     "@medusajs/medusa-cli": "preview",
     "@mikro-orm/cli": "5.9.7",
@@ -73,5 +54,23 @@
   "engines": {
     "node": "22.x",
     "npm": "10.x"
-  }
+  },
+  "keywords": [
+    "sqlite",
+    "postgres",
+    "typescript",
+    "ecommerce",
+    "headless",
+    "medusa"
+  ],
+  "license": "MIT",
+  "name": "medusa-2.0-boilerplate-backend",
+  "scripts": {
+    "build": "medusa build",
+    "dev": "medusa develop",
+    "seed": "medusa exec ./src/scripts/seed.ts",
+    "start": "medusa start"
+  },
+  "type:": "module",
+  "version": "0.0.1"
 }
